@@ -10,7 +10,7 @@ class App extends Component {
         <Todos store={this.props.store} />
       </div>
     );
-  }
+  }   
 }
 
 export default App;
