@@ -1,13 +1,22 @@
 import React, { Component } from 'react';
 
 class Todo extends Component {
-  render() {
-    return (
-      <li>
-        {this.props.text}
-      </li>
-    );
-  }
-};
+
+    handleOnClick = () => {
+      this.props.store.dispatch({
+        type: 'DELETE_TODO',
+        id: this.props.id
+      });
+    }
+
+    render() {
+      return (
+        <li>
+          {this.props.text}
+          <button onClick={this.handleOnClick} />
+        </li>
+      );
+    }
+  };
 
 export default Todo
