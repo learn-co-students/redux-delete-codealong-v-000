@@ -26,6 +26,7 @@ class CreateTodo extends Component {
       text: '',
     });
   }
+  <>
 
   render() {
     return(
