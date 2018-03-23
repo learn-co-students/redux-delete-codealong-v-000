@@ -12,7 +12,7 @@ class Todo extends Component {
   render() {
     return (
       <li>
-        {this.props.text}
+        {this.props.text} - 
         <button onClick={this.handleOnClick} />
       </li>
     );
