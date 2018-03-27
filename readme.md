@@ -9,7 +9,7 @@ With this lesson we'll continue through our journey through Redux. By the end of
 
 Throughout each code along and lab in this section, notice that we are never updating the DOM directly. Instead, we use the Redux pattern to have our store hold and update our state, and we then have React display that state. We want to continue with this pattern here.  
 
-So our goal is to have a button next to each list element with the todo; such that when a user clicks on that button, the list element will be removed.  In implementing this, remember that the `Todos` component displays the current list of todos, if we remove a todo from the store's state, the display of that todo should be removed.
+So our goal is to have a button next to each lisdt element with the todo; such that when a user clicks on that button, the list element will be removed.  In implementing this, remember that the `Todos` component displays the current list of todos, if we remove a todo from the store's state, the display of that todo should be removed.
 
 ## Deleting A Todo
 
