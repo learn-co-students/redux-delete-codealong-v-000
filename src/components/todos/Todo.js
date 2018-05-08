@@ -5,6 +5,7 @@ class Todo extends Component {
     return (
       <li>
         {this.props.text}
+        <button onClick={this.handleOnClick} />
       </li>
     );
   }
