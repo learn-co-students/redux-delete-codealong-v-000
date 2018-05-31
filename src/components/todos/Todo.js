@@ -4,7 +4,8 @@ class Todo extends Component {
 
   handleOnClick = () => {
     this.props.store.dispatch({
-      type: 'DELETE_TODO'
+      type: 'DELETE_TODO',
+      id: this.props.id
     });
   }
 
