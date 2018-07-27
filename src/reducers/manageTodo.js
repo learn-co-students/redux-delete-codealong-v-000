@@ -1,12 +1,18 @@
+lines (16 sloc)  413 Bytes
+let id = 0;
+
 export default function manageTodo(state = {
-  todos: [],
+ todos: []
 }, action) {
-  switch (action.type) {
-    case 'ADD_TODO':
-
-      return { todos: state.todos.concat(action.payload.text) };
-
-    default:
-      return state;
-  }
-}
+ switch (action.type) {
+   case 'ADD_TODO':
+     id++;
+     const todo = Object.assign({}, action.todo, { id: id });
+     return { todos: state.todos.concat(todo) };
+   case 'DELETE_TODO':
+     const todos = state.todos.filter(todo => todo.id !== action.id);
+     return  { todos }
+   default:
+     return state;
+ }
+};
