@@ -5,7 +5,7 @@ const Todo = props => {
     <div>
     
         {/* Note : Adding a click listener but using an anonymous function (rather than a separate named one) to keep this component small */}
-        <span>{props.text}</span><button onClick={() => props.delete(props.text)}>DELETE</button>
+        <span>{props.todo.text}</span><button onClick={() => props.delete(props.todo.id)}>DELETE</button>
     </div>
   )
 }
