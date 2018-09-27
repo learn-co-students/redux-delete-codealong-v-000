@@ -8,7 +8,7 @@ this lesson, you will be able to:
   * Delete individual elements
 
 ## Review and Goal
-
+as
 Throughout each code along in this section, notice that we are never updating
 the DOM directly. Instead, we use the Redux pattern to have our store hold and
 update our state, and we then have React display that state. We want to continue
