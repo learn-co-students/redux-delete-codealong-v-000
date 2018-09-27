@@ -1,6 +1,6 @@
 # Deleting Items with Redux
 
-## Objectives
+## Lecture/Objectives
 
 With this lesson we'll continue through our journey through Redux. By the end of
 this lesson, you will be able to:
