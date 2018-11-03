@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import CreateTodo from './components/todos/CreateTodo'
-import TodosContainer from './components/todos/TodosContainer'
+import Todos from './components/todos/Todos'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <CreateTodo />
-        <TodosContainer />
+        <CreateTodo store={this.props.store} />
+        <Todos store={this.props.store} />
       </div>
     );
   }

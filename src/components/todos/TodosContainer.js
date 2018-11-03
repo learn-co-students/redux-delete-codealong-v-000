@@ -1,24 +1,20 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux'
+import React, { Component } from 'react'
 import Todo from './Todo'
 
-class TodosContainer extends Component {
-
-  renderTodos = () => this.props.todos.map((todo, id) => <Todo key={id} text={todo} />)
+class Todos extends Component {
 
   render() {
+
+    const todos = this.props.store.getState().todos.map((todo, index) => {
+      return <Todo text={todo.text} key={index} id={todo.id} store={this.props.store} />
+    });
+
     return(
-      <div>
-        {this.renderTodos()}
-      </div>
+      <ul>
+        {todos}
+      </ul>
     );
   }
 };
 
-mapStateToProps = state => {
-  return {
-    todos: state.todos
-  }
-}
-
-export default connect(mapStateToProps)(TodosContainer);
+export default Todos;
