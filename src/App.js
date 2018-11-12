@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CreateTodo from './components/todos/CreateTodo'
-import Todos from './components/todos/Todos'
+import Todos from './components/todos/TodosContainer'
 
 class App extends Component {
   render() {
