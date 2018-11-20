@@ -1,7 +1,7 @@
 # Deleting Items with Redux
 
 ## Objectives
-
+boop beep
 With this lesson we'll continue through our journey through Redux. By the end of
 this lesson, you will be able to:
 
