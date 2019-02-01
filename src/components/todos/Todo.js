@@ -1,5 +1,20 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-const Todo = props => <li>{props.text}</li>
+class Todo extends Component {
 
+    handleOnClick() {
+        this.props.store.dispatch({
+            type: 'DELETE_TODO',
+            id: this.props.id,
+        });
+    }
+    render() {
+        return (
+            <li>
+                {this.props.text}
+                <button onClick={() => this.handleOnClick()}>X</button>
+            </li>
+        );
+    }
+};
 export default Todo;
