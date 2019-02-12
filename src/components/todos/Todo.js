@@ -3,7 +3,7 @@ import React from 'react'
 const Todo = props => {
   return (
     <div>
-      <span>{props.todo.text}</span><button onClick={() => props.clear(props.todo.id)}>DELETE</button>
+      <span>{props.todo.text}</span><button onClick={() => props.delete(props.todo.id)}>DELETE</button>
     </div>
   )
 }
