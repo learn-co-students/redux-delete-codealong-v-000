@@ -4,7 +4,6 @@ export default function manageTodo(
   },
   action
 ) {
-  console.log(action);
   switch (action.type) {
     case "ADD_TODO":
       const todo = {
