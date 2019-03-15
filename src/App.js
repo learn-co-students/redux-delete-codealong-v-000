@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import CreateTodo from './components/todos/CreateTodo'
-import TodosContainer from './components/todos/TodosContainer'
+import React, { Component } from "react"
+import CreateTodo from "./components/todos/CreateTodo"
+import TodosContainer from "./components/todos/TodosContainer"
 
 class App extends Component {
   render() {
@@ -9,8 +9,8 @@ class App extends Component {
         <CreateTodo />
         <TodosContainer />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
