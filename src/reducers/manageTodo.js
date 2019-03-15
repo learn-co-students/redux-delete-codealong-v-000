@@ -3,10 +3,10 @@ export default function manageTodo(state = {
 }, action) {
   switch (action.type) {
     case 'ADD_TODO':
-
-      return { todos: state.todos.concat(action.payload.text) };
+      console.log("state: ", state)
+      return action.payload.text !== "" ? { todos: state.todos.concat(action.payload.text) } : state
 
     default:
-      return state;
+      return state
   }
 }
