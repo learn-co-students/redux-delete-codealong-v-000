@@ -20,6 +20,7 @@ In implementing this, remember that the `Todos` component displays the current
 list of todos, if we remove a todo from the store's state, the display of that
 todo should be removed.
 
+
 ## Deleting A Todo
 
 To delete a todo we should add a button that when clicked, dispatches an action
