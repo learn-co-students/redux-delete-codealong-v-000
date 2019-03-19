@@ -2,10 +2,10 @@ import React from 'react'
 
 const Todo = props => {
    console.log(props.text);
-  
+ debugger
   return (
     <div>
-      <span> {props.todo} </span>
+      <span> {props.todo.text} </span>
       <button onClick={() => props.delete(props.todo.id)}>DELETE</button>
     </div>
 

@@ -12,7 +12,10 @@ export default function manageTodo(state = {
       return { todos: state.todos.concat(todo)};
 
     case "DELETE_TODO":
-      return {todos: state.todos.filter(todo => todo.id !== action.payload)}
+    console.log(action)
+      return {
+        todos: state.todos.filter(todo => todo.id !== action.payload)
+      }
 
     default:
       return state;
