@@ -15,10 +15,18 @@ class TodosContainer extends Component {
   }
 };
 
-mapStateToProps = state => {
+const mapStateToProps = state => {
   return {
     todos: state.todos
   }
 }
 
-export default connect(mapStateToProps)(TodosContainer);
+const mapDispatchToProps = dispatch => {
+  return {
+    delete: todoText => dispatch({
+      type: 'DELETE_TODO',
+      payload: todoText })
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(TodosContainer);
