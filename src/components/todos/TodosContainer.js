@@ -1,24 +1,42 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import Todo from './Todo'
+import { deleteTodo } from '../../actions/actions.js'
 
 class TodosContainer extends Component {
 
-  renderTodos = () => this.props.todos.map((todo, id) => <Todo key={id} text={todo} />)
+	handleClick = (e) => {
+		//e.preventDefault();
+		this.props.deleteTodo(e.target.id);
+	}
 
-  render() {
-    return(
-      <div>
-        {this.renderTodos()}
-      </div>
-    );
-  }
+	renderTodos = () => this.props.todos.map((todo) => (
+		<Todo
+			handleClick={this.handleClick}
+			todoId={todo.id}
+			text={todo.text}
+		/>
+	));
+
+	render() {
+		return (
+			<div>
+				{this.renderTodos()}
+			</div>
+		);
+	}
 };
 
-mapStateToProps = state => {
-  return {
-    todos: state.todos
-  }
+const mapStateToProps = state => {
+	return {
+		todos: state.todos
+	}
 }
 
-export default connect(mapStateToProps)(TodosContainer);
+const mapDispatchToProps = dispatch => {
+	return {
+		deleteTodo: (id) => dispatch(deleteTodo(id))
+	}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(TodosContainer);
