@@ -1,12 +1,13 @@
-export default function manageTodo(state = {
-  todos: [],
-}, action) {
-  switch (action.type) {
-    case 'ADD_TODO':
+export default function manageTodo(state={todos:[]}, action) {
+	switch (action.type) {
 
-      return { todos: state.todos.concat(action.payload.text) };
+		case 'ADD_TODO':
+			return { todos: [...state.todos, action.todo] }
 
-    default:
-      return state;
-  }
+		case 'DELETE_TODO':
+			return { todos: state.todos.filter(todo => todo.id !== action.id) };
+
+		default:
+			return state;
+	}
 }
