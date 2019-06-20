@@ -17,9 +17,9 @@ class CreateTodo extends Component {
     this.setState({text: ''})
   }
 
-  handleChange(event) {
+  handleChange = event => {
     this.setState({
-      text: event.target.value
+      [event.target.name]: event.target.value
     });
   }
 
@@ -28,7 +28,8 @@ class CreateTodo extends Component {
       <div>
         <form onSubmit={this.handleSubmit}>
     	    <label>add todo</label>
-          <input type="text" onChange={(event) => this.handleChange(event)} value={this.state.text}/>
+          <input type="text" onChange={this.handleChange} value={this.state.text} name="text"/>
+
           < br/>
           <input type="submit" />
           < br/> < br/>
