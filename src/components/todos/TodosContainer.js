@@ -3,7 +3,9 @@ import { connect } from 'react-redux';
 import Todo from './Todo';
 
 class TodosContainer extends Component {
-	renderTodos = () => this.props.todos.map((todo, id) => <Todo delete={this.props.delete} key={id} text={todo} />);
+	renderTodos = () => {
+		return this.props.todos.map((todo) => <Todo delete={this.props.delete} key={todo.id} todo={todo} />);
+	};
 
 	render() {
 		return <div>{this.renderTodos()}</div>;
