@@ -1,3 +1,5 @@
+import uuid from 'uuid';
+
 export default function manageTodo(state = {
   todos: [],
 }, action) {
@@ -5,7 +7,19 @@ export default function manageTodo(state = {
   switch (action.type) {
     case 'ADD_TODO':
 
-      return { todos: state.todos.concat(action.payload.text) };
+      const todo = {
+        id: uuid(),
+        text: action.payload.text
+      }
+      return { todos: state.todos.concat(todo) };
+
+      //return { todos: state.todos.concat(action.payload.text) };
+
+    case 'DELETE_TODO':
+
+      return { todos: state.todos.filter(todo => todo.id !== action.payload) }
+ 
+      //return { todos: state.todos.filter(todo => todo !== action.payload) }
 
     default:
       return state;
